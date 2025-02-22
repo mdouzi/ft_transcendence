@@ -1,5 +1,5 @@
 # Ft_Transcendence
-
+![Alt text](/project-1.PNG)
 
 ft_transcendence is the final project of the 42 curriculum, where students build a full-stack web application with real-time features. The project involves developing a secure, scalable, and interactive platform, integrating various technologies and best practices.
 
