@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="view-transition" content="same-origin" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles/profile.css">
+        <link rel="stylesheet" href="styles/game.css">
+        <link rel="stylesheet" href="styles/tournament.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- <link id="bootstrap-id" href="" rel="stylesheet"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>ft_transendence</title>
+    </head>
+    <body>
+
+        <!-- <header id="search-bar"> -->
+        <!---->
+        <!-- </header> -->
+        <div class="removeNotifcationBackground" ></div>
+        <div class="sidebar" id="navbar">
+            <div class="top">
+                <div class="logo">
+                    <i class='bx bxs-planet'></i>
+                     &nbsp;
+                     &nbsp; 
+                     &nbsp;
+                    <span>Transendence</span>
+                </div>
+                <i class="bx bx-menu"id="btn"></i>
+            </div>
+
+            <div class="user">
+                <img src="./images/42-logo.png" alt="me" class="user-img" id="user-photo">
+                <div>
+                    <p class="bold"  id="user-username">youssef</p>
+                    <p  id="user-email">bourais</p>
+                </div>
+            </div>
+
+            <ul>
+                <li class="nav-icons">
+                    <a href="/profile" data-view="/profile" class="barinpute">
+                        <i class='bx bxs-group'></i>
+                        <span class="nav-item" >Profile</span>
+
+                    </a>
+                    <!-- <span class="tooltip">Profile</span> -->
+
+                </li>
+
+                <li class="nav-icons">
+                    <a  href="/chat" data-view="/chat" class="barinpute">
+                        <i class='bx bxs-conversation'></i>
+                        <span class="nav-item">Chat</span>
+                    </a>
+                    <!-- <span class="tooltip">Chat</span> -->
+                </li>
+
+
+                <li class="nav-icons">
+                    <a  href="/game" data-view="/game" class="barinpute">
+                        <i class='bx bxs-game' ></i>
+                        <span class="nav-item">Game</span>
+                    </a>
+                    <!-- <span class="tooltip">Game</span> -->
+                </li>
+
+                <li class="nav-icons">
+                    <a  href="/tournament" data-view="/tournament" class="barinpute">
+                        <i class='bx bxs-trophy'></i>
+                        <span class="nav-item">Tournament</span>
+                    </a>
+                    <!-- <span class="tooltip">Tournament</span> -->
+                </li>
+
+                <li id="logout" class="last-item">
+                    <a href="">
+                        <i class="bx bx-log-out"></i>
+                        <span class="nav-item">Logout</span>
+
+                    </a>
+                    <!-- <span class="tooltip">logout</span> -->
+                </li>
+
+            </ul>
+            <div id="google_translate_element" class="translate-container"></div>
+        </div>
+
+        <!-- <nav class="navbar"> -->
+
+
+        <!-- </nav> -->
+
+        <div id="content">
+            <div class="container-chat">
+                <div class="block-container-nav-bar">
+                </div>
+               
+                <!-- main -->
+                <div class="container-main" id="container-main">
+                    <!-- start top nav bar -->
+                    <div id="bruh" class="container-top" >
+                        <div class="container-title">
+                            <img src="./images/Pingo.svg" alt="" srcset="">
+                        </div>
+                        <div class="container-search" style="position: relative;">
+                            <div class="search">
+                                <input type="search" placeholder="Search for people" id="input_search">
+                                <i class="fa-solid fa-magnifying-glass text-danger"></i>
+                                <i class="fa-solid fa-delete-left text-danger" id="delete"></i> 
+                            </div>
+                            <div class="container-outputs" id="container-outputs">
+                                <div class="container-out-image">
+                                    <img id="img-search" src="" alt="" srcset="">
+                                </div>
+                                <div class="container-out-name">
+                                    <p id="name-search"></p>
+                                </div>
+                                <div class="container-out-friend" id="button-friend">
+                                   <a href="/eachprofile" data-view="/eachprofile" id="goToeachProfile"><button>profile</button></a>
+                                </div>  
+                                <div class="container-out-friend2" id="button-friend2">
+                                    <button >No profile</button>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="container-profile">
+                            <div class="profile">
+                                <div class="poupap-notifacation" id="poupapNotification" style="display: none;">
+                                   
+                                    
+                                </div>
+                                <img class="avatars" src="" alt="">
+                                <div class="container-notification">
+                                    <p id="nameNotification" class="display-name"></p>
+                                    <p>2 unread notifications</p>
+                                </div>
+                                <div class="icon-down">
+                                    <div class="container-icon" id="iconDownbutton">
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <!-- end top nav bar -->
+                    <div id="con">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div id="loginn">
+        </div> -->
+         <!-- Toggle Button -->
+        <div style="position: fixed; bottom: 10px; right: 10px;">
+            <button id="toggleSize" style="padding: 10px; font-size: 1em;">Magnify</button>
+        </div>
+
+        <script type="text/javascript">
+            // JavaScript to toggle large text
+            const toggleSizeButton = document.getElementById('toggleSize');
+            const bodyElement = document.body;
+
+            toggleSizeButton.addEventListener('click', () => {
+                bodyElement.classList.toggle('large-text');
+            });
+        </script>
+        <script type="module" src="app.js"> </script>
+        <script type="module" src="profile.js"> </script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {pageLanguage: 'en'},
+                    'google_translate_element'
+                );
+            } 
+      </script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+         crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+ 
+</html>

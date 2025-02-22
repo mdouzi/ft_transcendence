@@ -1,0 +1,51 @@
+
+version: '3.8'
+
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    build: ./frontend
+    depends_on:
+      - api
+    volumes:
+      - /home/mdouzi/ft_trancsandance-42/frontend/front/:/var/www/html/
+    ports:
+      - '443:443'
+    networks:
+      - network
+    # restart: always
+
+  api:
+    container_name: api
+    image: python:3.12-alpine
+    build: ./backend
+    depends_on:
+      - postgres
+    volumes:
+      - /home/mdouzi/ft_trancsandance-42/backend/api/:/app
+    ports:
+      - '8000:8000'
+    networks:
+      - network
+    restart: always
+    env_file:
+      - /home/mdouzi/ft_trancsandance-42/.env
+
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASSWD}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - /home/mdouzi/ft_trancsandance-42/postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    networks:
+      - network
+    restart: always
+
+networks:
+  network:
