@@ -1,8 +1,8 @@
-t_transcendence
+# t_transcendence
 
 ft_transcendence is the final project of the 42 curriculum, where students build a full-stack web application with real-time features. The project involves developing a secure, scalable, and interactive platform, integrating various technologies and best practices.
 
-Features
+# Features
 
 Full-stack web application using Django for the backend.
 
@@ -20,7 +20,7 @@ Monitoring with Prometheus and Grafana.
 
 Pong gameplay as a core feature.
 
-Technologies Used
+# Technologies Used
 
 Backend: Django, Django REST Framework
 
